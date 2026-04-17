@@ -1,0 +1,88 @@
+
+
+#myButton::before {
+    content: "\2630";
+    font-size: 1.8rem;
+}
+
+#myButton{
+    background: none;
+    border: none;
+    color: $primaryColor;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    font-weight: 300;
+    transition: color .2s ease;
+}
+
+#myButton:focus-visible {
+    outline: 3px solid $focusRingColor;
+    outline-offset: 2px;
+}
+
+ul.menuLinks{
+    background-color: $primaryColor;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(16, 37, 63, 0.28);
+    li {
+        a{
+            display: block;
+            color: $onPrimaryColor;
+            text-decoration: none;
+            padding: 1rem;
+            transition: background-color .2s ease, color .2s ease;
+        }
+
+    }
+
+    li.active a { background-color: $menuActiveColor; }
+
+    li a:hover,
+    li a:focus-visible {
+        background-color: $menuHoverColor;
+        color: $onPrimaryColor;
+    }
+
+    &.open {
+    height: auto;
+}
+}
+
+
+
+#myButton.open::before{
+    content : "X";
+    font-size: 1.8rem;
+}
+
+
+/* Submenu */
+
+.parent > a::after {
+    content: "\25BC";
+    font-size: .8rem;
+    margin-left: .5rem;
+    float: right;
+}
+
+.parent ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: $subMenuColor;
+    display: none;
+    li  {
+        padding: 0 0.5rem;
+    }
+}
+
+.parent:hover ul {
+    display: block;
+}

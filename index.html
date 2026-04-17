@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Landscape Company Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/styles.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="headerWrapper">
+      <header>
+        <img src="./images/logo1x.png" alt="logo" srcset="./images/logo1x.png 1x, ./images/logo2x.png 2x, ./images/logo3x.png 3x" />
+        <span>Summit Landscape</span>
+        <button id="myButton" title="Menu"></button>
+      </header>
+    </div>
+    <!-- end header wrapper -->
+
+    <div id="navWrapper">
+      <nav>
+        <ul class="menuLinks">
+          <li><a href="#">Home</a></li>
+          <li class="parent">
+            <a href="#">Services</a>
+            <ul>
+              <li><a href="#">Landscape Design</a></li>
+              <li><a href="#">Outdoor Lighting</a></li>
+              <li><a href="#">Seasonal Maintenance</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="#">Project Gallery</a></li>
+          <li class="parent">
+            <a href="#">Our Team</a>
+            <ul>
+              <li><a href="#">Design Team</a></li>
+              <li><a href="#">Install Crew</a></li>
+              <li><a href="#">Lighting Specialists</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+      <main>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  srcset="./images/landscape-1-748px.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)"
+                />
+                <source
+                  srcset="./images/landscape-1-1172px.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)"
+                />
+                <img
+                  src="./images/landscape-1-1600px.webp"
+                  alt="Landscape 1"
+                  width="3"
+                  height="2"
+                />
+                <h2>Winter Serenity</h2>
+                <p>Soft path lighting and stone accents by the lake.</p>
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  srcset="./images/landscape-2-748px.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)"
+                />
+                <source
+                  srcset="./images/landscape-2-1172px.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)"
+                />
+                <img
+                  src="./images/landscape-2-1600px.webp"
+                  alt="Landscape 2"
+                  width="3"
+                  height="2"
+                />
+                <h2>Evening Pathway</h2>
+                <p>Layered garden lighting guides this evening walkway.</p>
+              </picture>
+            </div>
+
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  srcset="./images/landscape-3-748px.webp"
+                  type="image/webp"
+                  media="(max-width: 400px)"
+                />
+                <source
+                  srcset="./images/landscape-3-1172px.webp"
+                  type="image/webp"
+                  media="(max-width: 800px)"
+                />
+                <img
+                  src="./images/landscape-3-1600px.webp"
+                  alt="Landscape 3"
+                  width="3"
+                  height="2"
+                />
+                <h2>Misty Morning Hills</h2>
+                <p>Terraced planting shapes depth across the hillside.</p>
+              </picture>
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <h1>What Homeowners Say</h1>
+        <div id="testimonialSection">
+          <section>
+            <img src="./images/portrait_1.webp" alt="Testimonial 1" />
+            <h3>Sarah Johnson</h3>
+            <p>
+              “Summit transformed our yard with custom lighting and natural
+              stone edges. It feels like a private retreat.”
+            </p>
+          </section>
+
+          <section>
+            <img src="./images/portrait_2.webp" alt="Testimonial 2" />
+            <h3>Michael Brown</h3>
+            <p>
+              “The slider mockups helped us choose a design quickly, and the
+              finished landscape looks incredible day and night.”
+            </p>
+          </section>
+        </div>
+
+        <h1>Signature Mountain-Inspired Designs</h2>
+        <div id="cardSection">
+          <section>
+            <img
+              src="./images/ice-mountain.webp"
+              alt="Ice Mountain"
+              width="400"
+              height="250"
+            />
+            <img
+              class="overlay_image"
+              src="./images/paper.png"
+              alt="Paper"
+              width="400"
+              height="250"
+            />
+            <h3>Snowy Peaks Border</h3>
+          </section>
+
+          <section>
+            <img
+              src="./images/main-1.webp"
+              alt="Main Image 1"
+              width="400"
+              height="250"
+            />
+            <img
+              class="overlay_image"
+              src="./images/wave.png"
+              alt="Wave"
+              width="400"
+              height="250"
+            />
+            <h3>Blue Ridge Terrace</h3>
+          </section>
+
+          <section>
+            <img
+              src="./images/green-mountain.webp"
+              alt="Green Mountain"
+              width="400"
+              height="250"
+            />
+            <img
+              class="overlay_image"
+              src="./images/wave-mountain.svg"
+              alt="Wave"
+              width="400"
+              height="250"
+            />
+            <h3>Green Peaks Garden</h3>
+          </section>
+
+          <section>
+            <img
+              src="./images/volcano.webp"
+              alt="Volcano"
+              width="400"
+              height="250"
+            />
+            <img
+              class="overlay_image"
+              src="./images/wave-volcano.svg"
+              alt="Wave"
+              width="400"
+              height="250"
+            />
+            <h3>Volcanic Stone Feature</h3>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- end main wrapper -->
+
+    <div id="footerWrapper">
+      <footer>
+        <p>
+          Copyright &copy; 2026 Quang Phat Mai. All rights reserved.
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> |
+          <a href="#">Clients</a>
+        </p>
+      </footer>
+    </div>
+    <!-- end footer wrapper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

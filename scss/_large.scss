@@ -1,0 +1,50 @@
+header, nav, main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+/* NAVIGATION STUFF GOES HERE  */
+#myButton {
+    display: none;
+}
+
+#testimonialSection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+#testimonialSection section {
+    margin: 0;
+}
+
+ul.menuLinks, ul.menuLinks.open {
+    display: flex;
+    justify-content: flex-end;
+    li {
+        a{
+            display: block;
+            color: $onPrimaryColor;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: background-color .2s ease, color .2s ease;
+        }
+
+        a:hover,
+        a:focus-visible {
+            background-color: $menuHoverColor;
+            color: $onPrimaryColor;
+        }
+    }
+
+    li.active a { background-color: $menuActiveColor; }
+
+}
+
+// Cards 
+#cardSection{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+}

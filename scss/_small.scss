@@ -1,0 +1,284 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+    background-color: $pageBackgroundColor;
+    color: $textColor;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+    border-bottom: 1px solid $surfaceBorderColor;
+    background-color: $surfaceColor;
+}
+header {
+    display: grid;
+    grid-template-columns: 50px auto 44px;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $normalWeight;
+    }
+    p {
+        padding: .5rem $gutter;
+        color: $textColor;
+        line-height: $leading;
+    }
+}// end main
+
+.swiper, .swiper img {
+  width: 100%;
+  height: auto;
+  --swiper-navigation-color: #fff;
+    --swiper-pagination-color: #ffffff;
+    --swiper-pagination-bullet-inactive-color: #7b8794;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+  
+}
+
+.swiper-slide {
+    picture{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        image{
+            position: relative;
+            display: block;
+        }
+        h2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(16, 37, 63, 0.75);
+            color: #fff;
+            padding: 1rem 1.5rem;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            font-weight: $normalWeight;
+            text-align: center;
+            margin: 0;
+            min-width: 70%;
+            max-width: 90%;
+            border-left: 4px solid $accentColor;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(16, 37, 63, 0.3);
+            transition: all 0.3s ease;
+        }
+        p{
+            position: absolute;
+            top: calc(50% + 4rem);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(31, 79, 120, 0.85);
+            color: #f4f8ff;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            text-align: center;
+            margin: 0;
+            min-width: 70%;
+            max-width: 90%;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(16, 37, 63, 0.3);
+            transition: all 0.3s ease;
+        }
+        &:hover {
+            h2 {
+                background-color: rgba(16, 37, 63, 0.9);
+                transform: translate(-50%, -50%) translateY(-2px);
+            }
+            p {
+                background-color: rgba(31, 79, 120, 0.95);
+                transform: translate(-50%, -50%) translateY(2px);
+            }
+        }
+    }
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #fff;
+    background-color: #10253f;
+    border: 2px solid #f4f7fb;
+    border-radius: 50%;
+    box-shadow: 0 5px 12px rgba(6, 23, 43, 0.40);
+    transition: background-color .2s ease, box-shadow .2s ease;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #1f4f78;
+    box-shadow: 0 7px 16px rgba(6, 23, 43, 0.46);
+}
+
+#testimonialSection{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: .75rem;
+        background: linear-gradient(180deg, rgba(16, 37, 63, 0.98), rgba(31, 79, 120, 0.92));
+        margin: 1rem $gutter;
+        padding: 1.75rem 1.25rem 1.5rem;
+        border: 1px solid rgba(244, 248, 255, 0.12);
+        border-radius: 1rem;
+        box-shadow: 0 12px 28px rgba(16, 37, 63, 0.18);
+        overflow: hidden;
+        img{
+            width: 200px;
+            height: 200px;
+            clip-path: circle(50% at 50% 50%);
+            object-fit: cover;
+            margin-bottom: .25rem;
+            box-shadow: 0 8px 18px rgba(16, 37, 63, 0.28);
+        }
+
+        img:hover {
+            box-shadow: 0 12px 28px rgba(16, 37, 63, 0.38);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        
+        h3{
+            margin: 0;
+            color: #f4f8ff;
+            font-size: 1.1rem;
+            line-height: 1.3;
+            text-align: center;
+            font-weight: $normalWeight;
+            letter-spacing: .02em;
+        }
+        p{
+            margin: 0;
+            color: rgba(244, 248, 255, 0.9);
+            font-size: .95rem;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 32rem;
+        }
+    }
+}
+
+
+// Cards
+
+#cardSection{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    section{
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 400 / 250;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        img.overlay_image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            object-fit: cover;
+        }
+
+        h3 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            margin: 0;
+            color: #f4f8ff;
+            font-size: 1.2rem;
+            font-weight: $normalWeight;
+            background: linear-gradient(180deg, rgba(16, 37, 63, 0) -200%, rgba(16, 37, 63, 0.95) 100%);
+            text-align: left;
+            box-shadow: 0 -4px 12px rgba(16, 37, 63, 0.25);
+            border-left: 4px solid $accentColor;
+            z-index: 2;
+        }
+
+    }
+}
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $onPrimaryColor;
+    text-align: center;
+    line-height: $leading;
+    a {
+        color: $onPrimaryColor;
+        text-underline-offset: 2px;
+    }
+    a:hover {
+        color: $accentColor;
+    }
+}// end footer

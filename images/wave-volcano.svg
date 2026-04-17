@@ -1,0 +1,12 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .spike-shape {
+        fill: white;
+        opacity: 0.95;
+      }
+    </style>
+  </defs>
+  <!-- Single spiky layer -->
+  <path class="spike-shape" d="M 0 180 L 20 160 L 40 175 L 60 155 L 80 170 L 100 150 L 120 168 L 140 145 L 160 165 L 180 140 L 200 160 L 220 138 L 240 158 L 260 142 L 280 155 L 300 148 L 320 152 L 340 155 L 360 165 L 380 160 L 400 180 L 400 250 L 0 250 Z"/>
+</svg>

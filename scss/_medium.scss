@@ -1,0 +1,94 @@
+/* NAVIGATION STUFF GOES HERE  */
+
+#myButton {
+  display: none;
+}
+
+#testimonialSection {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+#testimonialSection section {
+  margin: 0;
+}
+
+#navWrapper{
+  background-color: $primaryColor;
+}
+
+ul.menuLinks {
+
+  display: flex;
+  padding: 0;
+  margin: 0;
+  li {
+    border-right: 1px solid $menuDividerColor;
+    list-style: none;
+    a {
+      display: block;
+      color: $onPrimaryColor;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      transition: background-color .2s ease, color .2s ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      background-color: $menuHoverColor;
+      color: $onPrimaryColor;
+    }
+  }
+
+  li.parent {
+    position: relative;
+    ul {
+        background-color: $subMenuColor;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        min-width: 14rem;
+        z-index: 10;
+        left: -999rem; // hide off screen
+        box-shadow: 0 10px 18px rgba(16, 37, 63, 0.28);
+      li {
+        border-right: none;
+      }
+
+      li a:hover,
+      li a:focus-visible {
+        background-color: $menuHoverColor;
+      }
+    }
+  }
+
+  li:hover ul {
+    left: auto; // show submenu
+  }
+
+  li ul li {
+    border-top: solid $menuDividerColor 1px;
+  }
+
+  li.parent > a::after {
+    content: "\25BC";
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    float: right;
+  }
+
+  li.active a {
+    background-color: $menuActiveColor;
+  }
+}
+
+
+// Cards
+
+#cardSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+
+}
